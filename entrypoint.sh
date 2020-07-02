@@ -34,7 +34,7 @@ exit_code=0
 
 # All files improperly formatted will be printed to the output.
 # find all C .c and .h files
-c_files=$(find . -name "*.[hc]")
+c_files=$(find . -regex ".*\.[chCH][cCpPxX+]*")
 
 # check formatting in each C file
 for file in $c_files; do
